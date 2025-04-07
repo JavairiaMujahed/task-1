@@ -1,18 +1,27 @@
 # task-1
 elevate labs data analyst internship task 1
+<br/>
+<p>
 Handling Missing Values:
 I identified missing values in several columns using isna() and isnull().
 I initially tried replacing missing values with 0 using fillna(value=0).
 Later, I used forward fill (fillna(method='ffill')) to fill missing values with the previous valid entry in the column.
 Finally, I replaced missing values in 'genre2' and 'genre3' columns with the string "Unknown".
+</p>
+<br/>
+<p>
 Dropping Columns:
 I removed the 'director' and 'cast' columns as they were deemed unnecessary for my analysis.
 I dropped the original 'duration' column after converting the duration values to minutes and storing it in a new column called duration_numeric.
 The original 'genre' column was removed after splitting its contents into 'genre1', 'genre2', and 'genre3' columns.
-Data Type Conversion:
+</p>
+<br/>
+<p>
+  Data Type Conversion:
 I converted the 'date_added' column to datetime format using pd.to_datetime() and then to 'dd-mm-yyyy' string format using dt.strftime().
 I converted several columns ('type', 'country', 'description', 'genre1', 'genre2', 'genre3') to string type using astype('string').
-Handling Duplicates:
+</p>
+  Handling Duplicates:
 I checked for duplicate rows using duplicated() and value_counts().
 I removed duplicate rows, keeping the first occurrence, using drop_duplicates().
 Data Transformation:
