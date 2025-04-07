@@ -24,10 +24,14 @@ I converted several columns ('type', 'country', 'description', 'genre1', 'genre2
   Handling Duplicates:
 I checked for duplicate rows using duplicated() and value_counts().
 I removed duplicate rows, keeping the first occurrence, using drop_duplicates().
+<br/>
+
 Data Transformation:
 I split the 'listed_in' column (which I later renamed to 'genre') into three separate columns ('genre1', 'genre2', 'genre3') to handle multiple genres associated with each title.
 I converted the 'duration' column, which had mixed units (seasons and minutes), to a consistent unit (minutes) in the new 'duration_numeric' column. I assumed 30 episodes per season and 25 minutes per episode for TV shows.
+<br/>
 Renaming Columns:
 I renamed the 'listed_in' column to 'genre' using rename().
+<br/>
 Saving the Cleaned Data:
 I saved the cleaned dataset to a CSV file named 'cleaned_netflix_data.csv', first in the current working directory and then to my Google Drive in a folder called 'Netflix_Data'.
